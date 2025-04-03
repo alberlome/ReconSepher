@@ -1,0 +1,23 @@
+<!-- templates/cve_results.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados CVEs - {{ vendor }}</title>
+</head>
+<body>
+    <h1>Resultados de CVEs para: {{ vendor }}</h1>
+
+    {% if cves %}
+        <ul>
+            {% for cve in cves %}
+                <li>{{ cve }}</li>  <!-- Mostramos cada elemento de la lista -->
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron CVEs para este proveedor.</p>
+    {% endif %}
+    <a href="/">Volver al formulario</a>
+</body>
+</html>
