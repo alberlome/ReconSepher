@@ -9,29 +9,21 @@ def helloWorld():
     return render_template('index.html')
 
 @app.route('/cve_results', methods=['POST'])
-def getCVEforVendor():
-    vendor = request.form.get('vendor')
+def getVulnerabilityForCVE():
+    vulnerability_id = request.form.get('vendor')
     
-    if not vendor:
+    if not vulnerability_id:
         return "No se proporcionó el parámetro 'vendor'.", 400
     
     # URL para la API
-    url = "https://cve.circl.lu/api/browse/"
-    params = {
-        'vendor': vendor,
-        'page': 1  # Puedes agregar más parámetros aquí si lo deseas
-    }
-
-    # Realizamos la solicitud GET a la API
-    response = requests.get(url, params=params)
+    url = f"https://cve.circl.lu/api/vulnerability/{vulnerability_id}/"
+    response = requests.get(url)
 
     if response.status_code == 200:
-        # Mostrar la respuesta completa en consola para depuración
-        print(response.json())  # Esto imprimirá el JSON completo
-        cves = response.json()  # Esto devuelve la lista completa
-        return render_template('cve_results.html', vendor=vendor, cves=cves)
+        vulnerabilities = response.json()  # Esto devuelve la vulnerabilidad detallada
+        return render_template('cve_results.html', vulnerability_id=vulnerability_id, vulnerabilities=vulnerabilities)
     else:
         return jsonify({"error": "No se pudo obtener la información."}), 500
-
+    
 if __name__ == '__main__':
     app.run(debug=True)

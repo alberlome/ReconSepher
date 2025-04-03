@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados CVEs - {{ vendor }}</title>
+    <title>Resultados vulnerabilities - {{ vulnerability_id }}</title>
 </head>
 <body>
-    <h1>Resultados de CVEs para: {{ vendor }}</h1>
+    <h1>Resultados de vulnerabilities para: {{ vulnerability_id }}</h1>
 
-    {% if cves %}
+    {% if vulnerabilities %}
         <ul>
-            {% for cve in cves %}
-                <li>{{ cve }}</li>  <!-- Mostramos cada elemento de la lista -->
+            {% for vulnerabilitie in vulnerabilities['data'] %}  <!-- Suponiendo que "data" es la clave donde están las vulnerabilidades -->
+                <li>{{ vulnerabilitie }}</li>
             {% endfor %}
         </ul>
     {% else %}
-        <p>No se encontraron CVEs para este proveedor.</p>
+        <p>No se encontraron vulnerabilities para este proveedor.</p>
     {% endif %}
     <a href="/">Volver al formulario</a>
 </body>
