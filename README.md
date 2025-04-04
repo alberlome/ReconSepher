@@ -9,6 +9,11 @@ Este es un proyecto simple utilizando Flask para buscar información sobre vulne
 - Muestra información detallada sobre la vulnerabilidad, incluyendo descripción, productos afectados, plataformas, versiones y más.
 - Diseño responsivo utilizando CSS.
 
+![image](https://github.com/user-attachments/assets/59ff4183-6df4-4a11-89e7-fb34bd04197c)
+
+![image](https://github.com/user-attachments/assets/632e9f22-bc19-4f98-b2d6-e41e5bc34340)
+
+
 ## Requisitos
 
 - Python 3.x
