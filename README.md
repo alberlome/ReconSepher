@@ -20,29 +20,27 @@ Este es un proyecto simple utilizando Flask para buscar información sobre vulne
 1. Clona este repositorio o descarga los archivos.
    ```bash
    git clone https://github.com/tu_usuario/repo.git
-
+   ````
+   
 Crea un entorno virtual (opcional pero recomendado):
-
-bash
-Copiar
+````bash
 python -m venv venv
+````
+
 Activa el entorno virtual:
-
 En Windows:
-
-bash
-Copiar
+````bash
 venv\Scripts\activate
+````
+
 En Mac/Linux:
-
-bash
-Copiar
+````bash
 source venv/bin/activate
+````
 Instala las dependencias necesarias:
-
-bash
-Copiar
+````bash
 pip install -r requirements.txt
+````
 Si no tienes un archivo requirements.txt, puedes instalar Flask y requests manualmente:
 
 bash
@@ -51,8 +49,7 @@ pip install flask requests
 Estructura del Proyecto
 El proyecto tiene la siguiente estructura:
 
-bash
-Copiar
+````bash
 /Proyecto
 │
 ├── app.py                  # Archivo principal de la aplicación Flask
@@ -61,12 +58,13 @@ Copiar
 │   └── cve_results.html    # Página para mostrar los resultados de la búsqueda
 └── /static                 # Carpeta que contiene los archivos estáticos (CSS)
     └── styles.css          # Estilos CSS para la interfaz
+````
 Ejecutar la Aplicación
 Para ejecutar la aplicación, usa el siguiente comando:
 
-bash
-Copiar
+````bash
 python app.py
+````
 Esto iniciará el servidor Flask localmente. En tu navegador, abre la URL:
 
 cpp
@@ -130,35 +128,35 @@ Para ejecutar esta aplicación, necesitas tener instalados los siguientes compon
 
    ```bash
    git clone https://github.com/tu_usuario/repo.git
+   ````
 Crear un entorno virtual (opcional pero recomendado): Esto es útil para manejar las dependencias de manera aislada.
 
-bash
-Copiar
+````bash
 python -m venv venv
+````
 Activar el entorno virtual:
 
 En Windows:
 
-bash
-Copiar
+````bash
 venv\Scripts\activate
+````
 En Mac/Linux:
-
-bash
-Copiar
+````bash
 source venv/bin/activate
+````
 Instalar las dependencias necesarias: Una vez activado el entorno virtual, instala las dependencias requeridas.
 
 Si tienes un archivo requirements.txt (como se indica en el proyecto):
 
-bash
-Copiar
+````bash
 pip install -r requirements.txt
+````
 Si no tienes el archivo requirements.txt, puedes instalar Flask y requests manualmente:
 
-bash
-Copiar
+````bash
 pip install flask requests
+````
 Estructura del Proyecto
 El proyecto tiene la siguiente estructura de archivos:
 
@@ -191,14 +189,15 @@ Asegúrate de que tienes un entorno virtual activado y las dependencias instalad
 
 Ejecuta el siguiente comando en el directorio raíz del proyecto:
 
-bash
-Copiar
+````bash
 python app.py
+````
 Esto iniciará el servidor Flask localmente. Abre tu navegador y ve a la siguiente URL para ver la aplicación:
 
 cpp
 Copiar
 http://127.0.0.1:5000/
+
 Uso de la Aplicación
 Página de búsqueda: Al acceder a la URL principal, verás un formulario donde podrás ingresar un código CVE (por ejemplo, CVE-2021-1234).
 
