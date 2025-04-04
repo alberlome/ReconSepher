@@ -7,7 +7,7 @@ app = Flask(__name__)
 def helloWorld():
     return render_template('index.html')
 
-def fetch_cve_data(cve):
+def fetchCveData(cve):
     url = f"https://cve.circl.lu/api/vulnerability/{cve}"
     try:
         response = requests.get(url)
@@ -31,7 +31,7 @@ def getVulnerabilityForCVE():
     cve = request.form.get('cve')
     if not cve:
         return jsonify({"error": "No se proporcionó el parámetro 'cve'."}), 400
-    containers = fetch_cve_data(cve)
+    containers = fetchCveData(cve)
     if not containers:
         return render_template('cve_results.html', cve=cve, containers=None)
     return render_template('cve_results.html', cve=cve, containers=containers)
