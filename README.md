@@ -183,8 +183,6 @@ python app.py
 ````
 Esto iniciará el servidor Flask localmente. Abre tu navegador y ve a la siguiente URL para ver la aplicación:
 
-cpp
-Copiar
 http://127.0.0.1:5000/
 
 Uso de la Aplicación
@@ -205,9 +203,6 @@ Realiza tus cambios y abre una pull request con tus contribuciones.
 
 Licencia
 Este proyecto está bajo la Licencia MIT. Puedes revisar los detalles en el archivo LICENSE.
-
-markdown
-Copiar
 
 ### Explicación del contenido:
 
