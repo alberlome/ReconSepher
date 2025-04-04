@@ -5,17 +5,11 @@ Este es un proyecto simple utilizando Flask para buscar información sobre vulne
 
 ![Grabación 2025-04-04 033221](https://github.com/user-attachments/assets/03f308a5-7b70-4d30-b8e1-6b80072bb15b)
 
-
 ## Características
 
 - Interfaz web donde el usuario puede buscar detalles de una vulnerabilidad CVE introduciendo su código.
 - Muestra información detallada sobre la vulnerabilidad, incluyendo descripción, productos afectados, plataformas, versiones y más.
 - Diseño responsivo utilizando CSS.
-
-
-
-![image](https://github.com/user-attachments/assets/632e9f22-bc19-4f98-b2d6-e41e5bc34340)
-
 
 ## Requisitos
 
