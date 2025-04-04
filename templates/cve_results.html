@@ -1,23 +1,57 @@
-<!-- templates/cve_results.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados vulnerabilities - {{ vulnerability_id }}</title>
+    <title>Resultados de CVE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Resultados de vulnerabilities para: {{ vulnerability_id }}</h1>
+    <div class="vulnerability-details">
+        <a href="./" class="href"><-Volver</a>
+        <h1>Resultados para <span class="strong"> {{ cve | upper }} </span></h1>
 
-    {% if vulnerabilities %}
-        <ul>
-            {% for vulnerabilitie in vulnerabilities['data'] %}  <!-- Suponiendo que "data" es la clave donde están las vulnerabilidades -->
-                <li>{{ vulnerabilitie }}</li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No se encontraron vulnerabilities para este proveedor.</p>
-    {% endif %}
-    <a href="/">Volver al formulario</a>
+        {% if containers %}
+            <div class="description">
+                <h2>Descripción</h2>
+                <p><strong>Título:</strong> {{ containers.cna.title }}</p>
+                <p><strong>Fecha de publicación:</strong> {{ containers.cna.datePublic }}</p>
+            </div>
+
+            <div class="affected-products">
+                <h2>Productos Afectados</h2>
+                {% for affected in containers.cna.affected %}
+                    <div class="details-section">
+                        <h3>{{ affected.vendor }} - {{ affected.product }}</h3>
+                        <p><strong>Plataformas afectadas:</strong> {{ affected.platforms | join(', ') }}</p>
+
+                        <h4>CPEs:</h4>
+                        <ul>
+                            {% for cpe in affected.cpes %}
+                                <li>{{ cpe }}</li>
+                            {% endfor %}
+                        </ul>
+
+                        <h4>Versiones:</h4>
+                        <ul>
+                            {% for version in affected.versions %}
+                                <li>
+                                    <strong>Versión:</strong> {{ version.version }}<br>
+                                    <strong>Menor que:</strong> {{ version.lessThan }}<br>
+                                    <strong>Tipo de versión:</strong> {{ version.versionType }}<br>
+                                    <strong>Estado:</strong> {{ version.status }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No se encontraron detalles para la vulnerabilidad <b> {{ cve }}</b> </br><b>Intenta con otro identificador.</b></p>
+        {% endif %}
+        <a href="./" class="href"><-Volver</a>
+    </div>
+</br>
 </body>
 </html>

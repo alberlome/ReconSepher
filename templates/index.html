@@ -1,17 +1,20 @@
-<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar CVEs por Vendor</title>
+    <title>Buscador de CVE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Buscar CVEs por Vendor</h1>
-    <form action="/cve_results" method="POST">
-        <label for="vendor">Introduce el Vendor:</label>
-        <input type="text" id="vendor" name="vendor" required>
-        <button type="submit">Buscar</button>
-    </form>
+    <section class="main">
+        <h1>Busca productos afectados por CVE</h1>
+        <form action="/cve_results" method="POST">
+            <label for="cve">Introduce el Código CVE:</label>
+            <input type="text" id="cve" name="cve" required>
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
 </body>
 </html>

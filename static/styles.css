@@ -1,0 +1,181 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    color: #1a73e8;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.vulnerability-details {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 80%;
+    max-width: 900px;
+    margin-top: 20px;
+    padding-bottom: 1rem;
+}
+
+.description, .references, .affected-products {
+    margin-bottom: 30px;
+}
+
+.details-section {
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.details-section h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+}
+
+.details-section ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.details-section li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.details-section li strong {
+    font-weight: 600;
+}
+
+ul {
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.strong {
+    font-weight: bolder;
+    color: #c30817;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .vulnerability-details {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .details-section h3 {
+        font-size: 1.3rem;
+    }
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+
+label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #34495e;
+    display: block;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a73e8;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1661c2;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
