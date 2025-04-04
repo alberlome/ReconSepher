@@ -3,7 +3,8 @@
 
 Este es un proyecto simple utilizando Flask para buscar información sobre vulnerabilidades CVE (Common Vulnerabilities and Exposures) a través de una API externa ( https://cve.circl.lu/api/) y mostrar los resultados en una página web.
 
-![image](https://github.com/user-attachments/assets/59ff4183-6df4-4a11-89e7-fb34bd04197c)
+![Grabación 2025-04-04 033221](https://github.com/user-attachments/assets/03f308a5-7b70-4d30-b8e1-6b80072bb15b)
+
 
 ## Características
 
