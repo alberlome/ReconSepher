@@ -160,8 +160,7 @@ pip install flask requests
 Estructura del Proyecto
 El proyecto tiene la siguiente estructura de archivos:
 
-bash
-Copiar
+````bash
 /Proyecto
 │
 ├── app.py                  # Archivo principal de la aplicación Flask
@@ -170,6 +169,7 @@ Copiar
 │   └── cve_results.html    # Página para mostrar los resultados de la búsqueda
 └── /static                 # Carpeta que contiene los archivos estáticos (CSS)
     └── styles.css          # Estilos CSS para la interfaz
+````
 app.py: Contiene el código principal de la aplicación Flask, que maneja las rutas y la lógica de negocio.
 
 templates/: Carpeta que guarda las plantillas HTML utilizadas por Flask.
