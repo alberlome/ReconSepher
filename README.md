@@ -1,5 +1,5 @@
 
-# Aplicación Flask para Buscar CVEs
+# Buscador de Sistemas Vulnerables a un CVE específico
 
 Este es un proyecto simple utilizando Flask para buscar información sobre vulnerabilidades CVE (Common Vulnerabilities and Exposures) a través de una API externa ( https://cve.circl.lu/api/) y mostrar los resultados en una página web.
 
