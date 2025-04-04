@@ -170,17 +170,6 @@ El proyecto tiene la siguiente estructura de archivos:
 └── /static                 # Carpeta que contiene los archivos estáticos (CSS)
     └── styles.css          # Estilos CSS para la interfaz
 ````
-app.py: Contiene el código principal de la aplicación Flask, que maneja las rutas y la lógica de negocio.
-
-templates/: Carpeta que guarda las plantillas HTML utilizadas por Flask.
-
-index.html: Página de inicio con el formulario de búsqueda donde el usuario ingresa el código CVE.
-
-cve_results.html: Página que muestra los resultados de la búsqueda de la vulnerabilidad CVE.
-
-static/: Carpeta para los archivos estáticos (CSS, imágenes, etc.).
-
-styles.css: Archivo CSS con los estilos de la interfaz de la aplicación.
 
 Ejecutar la Aplicación
 Para ejecutar la aplicación, sigue estos pasos:
